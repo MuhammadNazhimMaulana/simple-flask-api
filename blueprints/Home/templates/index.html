@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card m-5 min-vh-100">
+        <div class="card-body">
+
+            <!-- Hidden Title -->
+            <div class="d-none">{% block title %} HOME {% endblock %}</div>
+
+            <!-- Title -->
+            <h1 class="text-center text-main mt-5">FAKE API</h1>
+            
+            <!-- Description -->
+            <p class="text-center text-secondary mt-4">This is a simple API made with Flask (python), feel free to use it for learning how to consume an API.</p>
+            
+            <!-- List -->
+            <h1 class="text-center text-main mt-5 mb-5">TRY IT</h1>
+            
+            <div class="text-center">
+                <p class="text-secondary">Here are some endpoints that you could use:</p>
+                <ul>
+                    <li>A</li>
+                    <li>B</li>
+                    <li>C</li>
+                </ul>
+            </div>
+
+        </div>
+  </div>
+{% endblock %}
