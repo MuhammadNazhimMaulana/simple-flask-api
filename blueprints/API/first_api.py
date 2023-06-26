@@ -21,6 +21,14 @@ class FakesApi(Resource):
 
 # With Id
 class FakeApi(Resource):
+    
+    # Get one
+    def get(self, id):
+        return Response(response=json.dumps({
+            "message": "Get Detail Data Successful",
+            "id": id
+        }), mimetype="application/json", status=200)
+    
     # Put one
     def put(self, id):
         body = request.get_json()
@@ -36,12 +44,5 @@ class FakeApi(Resource):
 
         return Response(response=json.dumps({
             "message": "Delete Successful",
-            "id": id
-        }), mimetype="application/json", status=200)
-
-    # Get one
-    def get(self, id):
-        return Response(response=json.dumps({
-            "message": "Get Detail Data Successful",
             "id": id
         }), mimetype="application/json", status=200)
